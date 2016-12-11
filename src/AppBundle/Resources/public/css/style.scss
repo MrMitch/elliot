@@ -1,0 +1,42 @@
+@import 'bootstrap-reboot.min.css';
+@import 'bootstrap-flex.min.css';
+
+#wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+
+  > * {
+    padding: 10px;
+    flex: 1 100%;
+  }
+
+  #header {
+    background: tomato;
+  }
+
+  #footer {
+    background: lightgreen;
+  }
+
+  #main {
+    text-align: left;
+    background: deepskyblue;
+  }
+
+  #sidebar {
+    max-width: 300px;
+  }
+
+
+  @media all and (min-width: 600px) {
+    #sidebar { flex: 1 auto; }
+  }
+
+  @media all and (min-width: 800px) {
+    #main    { flex: 1; order: 2; }
+    #sidebar { order: 1; }
+    #footer  { order: 3; }
+  }
+}

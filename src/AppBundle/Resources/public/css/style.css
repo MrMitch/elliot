@@ -1,0 +1,32 @@
+@import url(bootstrap-reboot.min.css);
+@import url(bootstrap-flex.min.css);
+#wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center; }
+  #wrapper > * {
+    padding: 10px;
+    flex: 1 100%; }
+  #wrapper #header {
+    background: tomato; }
+  #wrapper #footer {
+    background: lightgreen; }
+  #wrapper #main {
+    text-align: left;
+    background: deepskyblue; }
+  #wrapper #sidebar {
+    max-width: 300px; }
+  @media all and (min-width: 600px) {
+    #wrapper #sidebar {
+      flex: 1 auto; } }
+  @media all and (min-width: 800px) {
+    #wrapper #main {
+      flex: 1;
+      order: 2; }
+    #wrapper #sidebar {
+      order: 1; }
+    #wrapper #footer {
+      order: 3; } }
+
+/*# sourceMappingURL=style.css.map */
